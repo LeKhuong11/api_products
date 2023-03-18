@@ -5,7 +5,7 @@ const app = express()
 const mongoose = require('mongoose')
 const port = 3000;
 const router = require('./router/productRoute')
-const db_url = process.env.MONGODB_URL
+const db_url = 'mongodb+srv://khuongdev11:khuongle1102@cluster0.ttgcd6s.mongodb.net/list?retryWrites=true&w=majority'
 
 app.use(express.json())
 
