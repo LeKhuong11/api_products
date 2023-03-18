@@ -3,9 +3,16 @@ require('dotenv').config();
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
+const cors = require('cors')
 const port = 3000;
 const router = require('./router/productRoute')
 const db_url = 'mongodb+srv://khuongdev11:khuongle1102@cluster0.ttgcd6s.mongodb.net/list?retryWrites=true&w=majority'
+
+
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE']
+}))
 
 app.use(express.json())
 
